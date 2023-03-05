@@ -1,3 +1,4 @@
+/* General styles */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 * {
   margin: 0;
@@ -12,6 +13,7 @@ body {
   color:#fff;
   font-family: "Poppins", sans-serif;
 }
+/* styling container and items  */
 main {
   width: 100vw;
   display: flex;
@@ -42,7 +44,6 @@ main {
 .overlay {
   display: grid;
   place-items: center;
-  padding:0 30px;
   grid-template-rows: 20vh;
   width: 100%;
   height: 100%;
@@ -78,4 +79,23 @@ form{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* adding responsiveness*/
+@media(max-width:768px){
+  main{
+    flex-direction: column;
+  }
+  .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .overlay{
+    gap:30px;
+  }
+  .main-content{
+    width: 80vw;
+  }
 }
